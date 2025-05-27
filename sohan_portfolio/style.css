@@ -1,0 +1,269 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7fa;
+    color: #1e1e2f;
+  }
+  
+  /* Navigation Bar */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0b1c2c;
+    padding: 20px 40px;
+    color: white;
+  }
+  
+  nav h1 {
+    font-size: 1.8rem;
+    color: #00b7ff;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #00b7ff;
+  }
+  
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #0b1c2c, #003049);
+    color: white;
+  }
+  
+  .hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    background-color: #00b7ff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background-color: #009fd1;
+  }
+  
+  /* Projects Section */
+  .projects {
+    padding: 60px 20px;
+    background-color: #ffffff;
+  }
+  
+  .projects h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #003049;
+  }
+  
+  .project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+  }
+  
+  .project {
+    background-color: #f0f4f8;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  }
+  
+  .project h3 {
+    font-size: 1.3rem;
+    color: #002d62;
+    margin-bottom: 10px;
+  }
+  
+  .project p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 12px;
+  }
+  
+  .buttons {
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    margin: 5px 8px 0 0;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .buttons:hover {
+    background-color: #005fa3;
+  }
+  
+  /* Skills, Contact, Certifications */
+  .skills, .contact, .certifications {
+    padding: 60px 20px;
+    background-color: #f9fbfd;
+  }
+  
+  .skills h2, .contact h2, .certifications h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #003049;
+  }
+  
+  .skills ul, .certifications ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    list-style: none;
+    font-size: 1rem;
+    color: #222;
+  }
+  
+  .skills li, .certifications li {
+    background-color: #e3f2fd;
+    padding: 8px 16px;
+    border-radius: 6px;
+  }
+  
+  /* Contact Info */
+  .contact p, .contact a {
+    text-align: center;
+    font-size: 1rem;
+    color: #222;
+    margin: 8px;
+  }
+  
+  .contact a {
+    color: #0077cc;
+    text-decoration: none;
+  }
+  
+  .contact a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Typography */
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .hero h2 {
+      font-size: 2rem;
+    }
+  
+    .btn {
+      font-size: 0.95rem;
+    }
+  }
+  
+/* Smooth scroll behavior for all browsers */
+html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Responsive navigation bar */
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  
+  /* Responsive section padding and layout */
+  section {
+    padding: 60px 30px;
+  }
+  
+  @media (max-width: 768px) {
+    .hero h2 {
+      font-size: 2rem;
+    }
+  
+    .hero p {
+      font-size: 1.1rem;
+    }
+  
+    .project-list {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .project {
+      width: 100%;
+    }
+  
+    .skills ul {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header nav h1 {
+      font-size: 1.2rem;
+    }
+  
+    .skills ul {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+  }
+    body {
+        background-color: #f0f4f8;
+        color: #333;
+        line-height: 1.6;
+    }
+    
+    
